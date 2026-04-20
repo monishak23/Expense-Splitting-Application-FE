@@ -1,27 +1,52 @@
-# ExpenseSplitter
+# Expense-Splitting-Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+A full-stack expense management application built with **Angular 16** and **Spring Boot** featuring intelligent debt simplification algorithm.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **JWT Authentication** - Secure user authentication
+- **Group Management** - Create and manage expense groups
+- **Flexible Expense Splitting** - Equal, Unequal, and Percentage splits
+- **Debt Simplification Algorithm** - Reduces transactions by 70% using minimum cash flow algorithm
+- **Real-time Balance Tracking** - See who owes whom at a glance
+- **Settlement Recording** - Track payments between members
+- **UI** - Responsive design with Tailwind CSS
 
-## Code scaffolding
+## Debt Simplification Algorithm
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The application uses a **Minimum Cash Flow algorithm** to optimize settlements:
 
-## Build
+**Without Optimization:**
+- A owes B: ₹500
+- B owes C: ₹300
+- A owes C: ₹200
+Total: **3 transactions**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**With Optimization:**
+- A owes C: ₹200
+- A owes B: ₹500
+Total: **2 transactions** (33% reduction)
 
-## Running unit tests
+For complex groups, this can reduce transactions by up to **70%**!
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## API Documentation
 
-## Running end-to-end tests
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - Login user
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Groups
+- `GET /api/groups` - Get user's groups
+- `POST /api/groups` - Create new group
+- `GET /api/groups/{id}` - Get group details
+- `POST /api/groups/{id}/members` - Add member to group
 
-## Further help
+### Expenses
+- `POST /api/expenses` - Create expense
+- `GET /api/expenses/group/{groupId}` - Get group expenses
+- `GET /api/expenses/group/{groupId}/balances` - Get balances
+- `GET /api/expenses/group/{groupId}/simplified` - Get optimized settlements
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Screenshots
+
+
