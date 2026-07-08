@@ -16,6 +16,6 @@ jobs:
       - run: echo "Initiated by ${{ github.actor }}"
       - run: npm ci
       - run: npm run build
-      - run: npm run test
+      - run: npm test -- --watch=false --browsers=ChromeHeadless
       
       
