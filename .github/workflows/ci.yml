@@ -1,0 +1,21 @@
+name: Continuous Integration
+
+on: 
+  pull_request:
+    types: [opened, reopened, edited, synchronize]
+
+jobs: 
+  ci-build-check:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v4
+      - uses: actions/set-up-node@v4
+        with:
+           node-version: 20
+           cache: npm
+      - run: echo "Initiated by {{github.author}}"
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test
+      
+      
