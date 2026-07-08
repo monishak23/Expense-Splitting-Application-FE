@@ -13,7 +13,7 @@ jobs:
         with:
            node-version: 20
            cache: npm
-      - run: echo "Initiated by {{github.author}}"
+      - run: echo "Initiated by ${{ github.actor }}"
       - run: npm ci
       - run: npm run build
       - run: npm run test
