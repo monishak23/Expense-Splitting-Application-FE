@@ -48,5 +48,8 @@ For complex groups, this can reduce transactions by up to **70%**!
 - `GET /api/expenses/group/{groupId}/simplified` - Get optimized settlements
 
 ## Screenshots
-
-
+<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/682b9fe3-27ec-4771-bda9-2baab71302a7" />
+<img width="1917" height="1018" alt="image" src="https://github.com/user-attachments/assets/06ade347-7e10-45e0-be26-e65ee4ac57b5" />
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/e9e07229-bd43-45d1-92ee-1cc5999ccd2d" />
+<img width="1677" height="482" alt="image" src="https://github.com/user-attachments/assets/3898ca7d-b363-4902-9825-4607615add2e" />
+<img width="1672" height="565" alt="image" src="https://github.com/user-attachments/assets/9277490b-53df-4d50-96de-bcccfe8d4ad4" />
